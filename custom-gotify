@@ -22,7 +22,7 @@ agentname = alert_json['agent']['name']
 path = alert_json.get('syscheck', {}).get('path', 'N/A')
 
 # Build the title and message for Gotify
-title = "Wazuh Alert - Rule " + str(ruleid)
+title = f"Wazuh Alert - {agentname} - Rule {ruleid}"
 message = (
     "FIM alert on [" + path + "]\n"
     "- State: " + description + "\n"
